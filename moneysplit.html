@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moneysplit.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
+            <h1>Split the bill among your friends</h1>
+            <h1 id="result1" style="display:none">The splited amount is:</h1>
+            <h1 id="result"></h1>
+            <div class="row">
+                <input type="text" placeholder="enter amount" id="amount">
+                <input type="text" placeholder="Enter no.of persons" id="person">
+            </div>
+            <div>
+                <input type="button" onclick="calamnt()" id="split" value="split the bill">
+            </div>
+        </div>
+       
+    </div>
+    <script>
+          let but=document.getElementById("split");
+
+        
+          
+          function calamnt()
+          {
+           let amnt= document.getElementById("amount").value/document.getElementById("person").value;
+           document.getElementById("result1").style.display="block"
+           document.getElementById("result").innerHTML=amnt;
+           console.log(amnt);
+          }
+    </script>
+</body>
+
+</html>
